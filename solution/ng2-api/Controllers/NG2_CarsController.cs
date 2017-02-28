@@ -15,6 +15,7 @@ namespace ng2_api.Controllers
     {
         private NG2Context db = new NG2Context();
 
+
         // GET: api/NG2_Cars
         public IQueryable<NG2_Cars> GetNG2_Cars()
         {
