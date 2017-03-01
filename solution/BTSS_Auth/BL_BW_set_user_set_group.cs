@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace BTSS_Auth
 {
-    public class BL_BW_set_user
+    public class BL_BW_set_user_set_group
     {
         #region "Protected Attributes"
 
@@ -47,20 +47,20 @@ namespace BTSS_Auth
 
         #region "Public Methods"
 
-        public BL_BW_set_user()
+        public BL_BW_set_user_set_group()
         {
             this._comDAL = new DL_DU_DbContext();
             this._errorMessage = "";
         }
 
-        //get set_user
+        //get set_user_set_group
         public List<BL_BE_Common> ReadSetUser(BL_BE_Common userInfo)
         {
             BL_BE_Common blbeCommon;
             DataTable dataTable = new DataTable();
             List<BL_BE_Common> userList = new List<BL_BE_Common>();
 
-            dataTable = this._comDAL.GetData(BL_BC_AppCons.SP_USER_GET, InjectDep(userInfo));
+            dataTable = this._comDAL.GetData(BL_BC_AppCons.SP_USERGROUP_GET, InjectDep(userInfo));
             this._errorMessage = this._comDAL._errorMessage;
 
             if (dataTable == null)
@@ -74,15 +74,19 @@ namespace BTSS_Auth
                 blbeCommon.user_last_name = dataRow["user_last_name"].ToString();
                 blbeCommon.user_first_name = dataRow["user_first_name"].ToString();
                 blbeCommon.user_middle_name = dataRow["user_middle_name"].ToString();
-                blbeCommon.created_date_user = dataRow["created_date"].ToString();
+                blbeCommon.created_date_user = dataRow["created_date_user"].ToString();
+                blbeCommon.grp_id = dataRow["grp_id"].ToString();
+                blbeCommon.grp_name = dataRow["grp_name"].ToString();
+                blbeCommon.grp_desc = dataRow["grp_desc"].ToString();
+                blbeCommon.created_date_grp = dataRow["created_date_grp"].ToString();
                 userList.Add(blbeCommon);
             }
 
             return userList;
         }
 
-        //check if user is authenticated
-        public bool IsUserAuthenticated(BL_BE_Common userInfo)
+        //check if user is authorized
+        public bool IsUserAuthorized(BL_BE_Common userInfo)
         {
             List<BL_BE_Common> userList = new List<BL_BE_Common>();
 

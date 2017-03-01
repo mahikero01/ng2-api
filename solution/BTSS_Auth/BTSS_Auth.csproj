@@ -41,10 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL_ApplicationFacade.cs" />
     <Compile Include="BL_BC_AppCons.cs" />
     <Compile Include="BL_BE_Common.cs" />
-    <Compile Include="BL_BW_set_group.cs" />
+    <Compile Include="BL_BW_set_user_set_group.cs" />
     <Compile Include="BL_BW_set_module.cs" />
     <Compile Include="BL_BW_set_user.cs" />
     <Compile Include="DL_DU_DbContext.cs" />
