@@ -43,16 +43,11 @@
   <ItemGroup>
     <Compile Include="BL_ApplicationFacade.cs" />
     <Compile Include="BL_BC_AppCons.cs" />
-    <Compile Include="BL_BE_set_group.cs" />
-    <Compile Include="BL_BE_set_module.cs" />
-    <Compile Include="BL_BE_set_user.cs" />
+    <Compile Include="BL_BE_Common.cs" />
     <Compile Include="BL_BW_set_group.cs" />
     <Compile Include="BL_BW_set_module.cs" />
     <Compile Include="BL_BW_set_user.cs" />
-    <Compile Include="DL_DA_set_group.cs" />
-    <Compile Include="DL_DA_set_module.cs" />
-    <Compile Include="DL_DA_set_user.cs" />
-    <Compile Include="DL_DU_MSSQLTools.cs" />
+    <Compile Include="DL_DU_DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

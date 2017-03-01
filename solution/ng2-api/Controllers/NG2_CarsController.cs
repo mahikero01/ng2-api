@@ -1,4 +1,5 @@
-﻿using ng2_api.Models;
+﻿using BTSS_Auth;
+using ng2_api.Models;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.Http.Description;
+using System.Web.Http.Description; 
 
 namespace ng2_api.Controllers
 {
@@ -20,8 +21,23 @@ namespace ng2_api.Controllers
         public IQueryable<NG2_Cars> GetNG2_Cars()
         {
             string userName = Environment.UserName;
-            Debug.Print(userName);
+            string userName2 = "albert";
+
+            BL_BE_Common blbeCommon = new BL_BE_Common();
+            BL_BW_set_user btssAuth = new BL_BW_set_user();
+
+            blbeCommon.user_name = userName;
+            bool userAuth1 = btssAuth.IsUserAuthorized(blbeCommon);
+            Debug.Print(userAuth1.ToString());
+
+            blbeCommon.user_name = userName2;
+            bool userAuth2 = btssAuth.IsUserAuthorized(blbeCommon);
+            Debug.Print(userAuth2.ToString());
             return db.NG2_Cars;
+
+            //IQueryable<NG2_Cars> dummy = null;
+            //return dummy;
+
         }
 
         // GET: api/NG2_Cars/5

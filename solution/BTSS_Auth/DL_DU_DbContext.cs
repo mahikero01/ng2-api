@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace BTSS_Auth
 {
-    public abstract class DL_DU_DbContext
+    public class DL_DU_DbContext
     {
         #region "Private/Public Attribute"
 
@@ -24,7 +24,7 @@ namespace BTSS_Auth
 
         private void GetDBConnection()
         {
-            this._serverInfo = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
+            this._serverInfo = ConfigurationManager.ConnectionStrings["ng2Context"].ToString();
             this._dbConnection = new SqlConnection(this._serverInfo);
         }
 
@@ -36,9 +36,9 @@ namespace BTSS_Auth
 
         #endregion "Private Method"
 
-        #region "Protected Method"
+        #region "Public Method"
 
-        protected DataTable GetData(string queryStatement, SqlParameterCollection queryParameter)
+        public DataTable GetData(string queryStatement, SqlParameterCollection queryParameter)
         {
             DataTable resultSet = null;
 
@@ -82,6 +82,6 @@ namespace BTSS_Auth
             return resultSet;
         }
 
-        #endregion "Protected Method"
+        #endregion "Public Method"
     }
 }

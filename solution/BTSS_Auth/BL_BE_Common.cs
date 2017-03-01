@@ -1,6 +1,6 @@
 ﻿namespace BTSS_Auth
 {
-    internal class BL_BE_Common
+    public class BL_BE_Common
     {
         public string user_id { get; set; }
         public string user_name { get; set; } 

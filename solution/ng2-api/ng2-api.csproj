@@ -443,7 +443,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BTSS_Auth\BTSS_Auth.csproj">
+      <Project>{f562d0a2-5218-4f2c-b154-427842396729}</Project>
+      <Name>BTSS_Auth</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />

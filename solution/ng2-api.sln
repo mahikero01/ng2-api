@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng2-api", "ng2-api\ng2-api.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ng2-api.Tests", "ng2-api.Tests\ng2-api.Tests.csproj", "{FF7D8A3F-28F0-4357-A62F-57C992BAC2FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTSS_Auth", "BTSS_Auth\BTSS_Auth.csproj", "{F562D0A2-5218-4F2C-B154-427842396729}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FF7D8A3F-28F0-4357-A62F-57C992BAC2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF7D8A3F-28F0-4357-A62F-57C992BAC2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF7D8A3F-28F0-4357-A62F-57C992BAC2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F562D0A2-5218-4F2C-B154-427842396729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F562D0A2-5218-4F2C-B154-427842396729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F562D0A2-5218-4F2C-B154-427842396729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F562D0A2-5218-4F2C-B154-427842396729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
