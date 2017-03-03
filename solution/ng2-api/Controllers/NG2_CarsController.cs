@@ -20,6 +20,7 @@ namespace ng2_api.Controllers
         // GET: api/NG2_Cars
         public IQueryable<NG2_Cars> GetNG2_Cars()
         {
+            //define here the roles who will have access to this action method
             string[] authRoles= {
                            "admin",
                            "user",
@@ -28,16 +29,25 @@ namespace ng2_api.Controllers
             BLBE_UserInfo blbeCommon = new BLBE_UserInfo();
             BLBW_SetUserSetGroup blbwSetUserSetGroup = new BLBW_SetUserSetGroup();
 
+            //this will get current logon user
             blbeCommon.user_name = Environment.UserName;
 
+            //this will check if current logon is authenticated
             if (!blbwSetUserSetGroup.IsUserAuthenticated(blbeCommon))
                 return null;
 
+            //this will check if the current logon is authorized
             foreach (string role in authRoles)
             {
                 blbeCommon.grp_name = role;
                 if (blbwSetUserSetGroup.IsUserAuthorized(blbeCommon))
+                {
+                    //place code to be executed here if logon user is both
+                    //authenticated and authorized to use this action method
+
                     return db.NG2_Cars;
+                }
+                    
             }
 
             return null;
