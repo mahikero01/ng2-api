@@ -1,6 +1,6 @@
 ﻿namespace BTSS_Auth
 {
-    internal class BL_BC_AppCons
+    internal class BLBC_Constant
     {
         public const string PM_USRID = "@user_id";
         public const string PM_USRNME = "@user_name";
@@ -16,8 +16,6 @@
         public const string PM_MODNME = "@mod_name";
         public const string PM_MODDES = "@mod_desc";
         public const string PM_CDTMOD = "@created_date_mod";
-        public const string SP_USER_GET = "BTSS_SetUser_Get";
         public const string SP_USERGROUP_GET = "BTSS_SetUserSetGroup_Get";
-        public const string SP_USERMODULE_GET = "BTSS_SetUserSetModule_Get";
     }
 }

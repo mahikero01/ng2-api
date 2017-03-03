@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace BTSS_Auth
 {
-    public class DL_DU_DbContext
+    public class DLDA_DbContext
     {
         #region "Private/Public Attribute"
 

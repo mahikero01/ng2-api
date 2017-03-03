@@ -20,19 +20,17 @@ namespace ng2_api.Controllers
         // GET: api/NG2_Cars
         public IQueryable<NG2_Cars> GetNG2_Cars()
         {
-            //IQueryable<NG2_Cars> dummy = null;
             string[] authRoles= {
                            "admin",
                            "user",
                            "market"
                        };
-            BL_BE_Common blbeCommon = new BL_BE_Common();
-            BL_BW_set_user blbwSetUser = new BL_BW_set_user();
-            BL_BW_set_user_set_group blbwSetUserSetGroup = new BL_BW_set_user_set_group();
+            BLBE_UserInfo blbeCommon = new BLBE_UserInfo();
+            BLBW_SetUserSetGroup blbwSetUserSetGroup = new BLBW_SetUserSetGroup();
 
             blbeCommon.user_name = Environment.UserName;
 
-            if (!blbwSetUser.IsUserAuthenticated(blbeCommon))
+            if (!blbwSetUserSetGroup.IsUserAuthenticated(blbeCommon))
                 return null;
 
             foreach (string role in authRoles)
@@ -43,23 +41,6 @@ namespace ng2_api.Controllers
             }
 
             return null;
-            //string userName = Environment.UserName;
-            //string userName2 = "albert";
-
-            
-
-            //blbeCommon.user_name = userName;
-            //bool userAuth1 = btssAuth.IsUserAuthorized(blbeCommon);
-            //Debug.Print(userAuth1.ToString());
-
-            //blbeCommon.user_name = userName2;
-            //bool userAuth2 = btssAuth.IsUserAuthorized(blbeCommon);
-            //Debug.Print(userAuth2.ToString());
-            
-
-            
-            //return dummy;
-
         }
 
         // GET: api/NG2_Cars/5
