@@ -455,7 +455,6 @@
     <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="node_modules\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
