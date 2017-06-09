@@ -11,7 +11,7 @@
     // map tells the System loader where to look for things
     map: {
       // our app is within the app folder
-      app: 'app',
+      'app': 'app',
 
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.min.js',
@@ -23,19 +23,34 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.min.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.min.js',
 
+      //moment
+      'moment':'npm:moment/min/moment.min.js',
+      'ng2-datetime-picker': 'npm:ng2-datetime-picker/dist',
+
+      //ngx-bootstrap
+      'ngx-bootstrap':'npm:ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js',
+
       // other libraries
-      'rxjs':                      'npm:rxjs'
-      //'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'rxjs':                      'npm:rxjs',
+      
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
-        main: './main.js',
-        defaultExtension: 'js'
+        defaultExtension: 'js',
+        meta: {
+          './*.js': {
+            loader: 'systemjs-angular-loader.js'
+          }
+        }
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'ng2-datetime-picker': {
+          main: 'ng2-datetime-picker.umd.js',
+          defaultExtension: 'js'
+      },
     }
   });
 })(this);

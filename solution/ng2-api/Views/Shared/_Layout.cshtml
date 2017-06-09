@@ -16,11 +16,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Styles.Render("~/Content/css")
     
-
-    @Scripts.Render("~/bundles/config")
-    @Scripts.Render("~/bundles/modernizr")
+    <!-- Angular systemjs -->
+    @Scripts.Render("~/bundles/systemjs")
+    
     <script>
-        System.import('app').catch(function(err){ console.error(err); });
+        System.import('main.js').catch(function (err) { console.error(err); });
     </script>
 </head>
 <body>

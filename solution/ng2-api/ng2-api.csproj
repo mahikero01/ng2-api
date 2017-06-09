@@ -185,7 +185,7 @@
     <Content Include="app\cars\cars-list.component.js" />
     <Content Include="app\cars\cars.module.js" />
     <Content Include="app\cars\cars.routing.js" />
-    <Content Include="app\main.js" />
+    <Content Include="main.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -423,10 +423,9 @@
     <Content Include="node_modules\rxjs\util\UnsubscriptionError.js" />
     <Content Include="node_modules\systemjs\dist\system.js" />
     <Content Include="node_modules\zone.js\dist\zone.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="styles.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="systemjs-angular-loader.js" />
+    <Content Include="systemjs.config.extras.js" />
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

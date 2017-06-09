@@ -16,20 +16,14 @@ namespace ng2_api
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/node_modules/jquery/dist/jquery.min.js"));
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/node_modules/bootstrap/dist/js/bootstrap.min.js",
-                      "~/Scripts/respond.min.js"));
+                      "~/node_modules/bootstrap/dist/js/bootstrap.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/node_modules/bootstrap/dist/css/bootstrap.min.css",
-                      "~/styles.css"));
+                      "~/Content/styles.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/config").Include(
+            bundles.Add(new ScriptBundle("~/bundles/systemjs").Include(
                         "~/systemjs.config.js"));
         }
     }
